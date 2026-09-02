@@ -33,12 +33,12 @@
 #     print("Niepoprawny znak działania.")
 
 
-def osoba(imie, wiek):
-    print(f"Imię: {imie}, Wiek: {wiek}")
+#def osoba(imie, wiek):
+#    print(f"Imię: {imie}, Wiek: {wiek}")
 
 
-imie = input("Podaj imię: ")
-wiek = int(input("Podaj wiek: "))
+#imie = input("Podaj imię: ")
+#wiek = int(input("Podaj wiek: "))
 
-osoba(imie, wiek)
+#osoba(imie, wiek)
 
