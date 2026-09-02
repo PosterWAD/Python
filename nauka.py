@@ -42,33 +42,44 @@
 
 #osoba(imie, wiek)
 
-def dodaj(a, b):
-    return a + b
-def odejmij(a, b):
-    return a - b
-def pomnoz(a, b):
-    return a * b   
-def podziel(a, b):
-    if b != 0:
-        return a / b
-    else:
-        return "Błąd: Nie można dzielić przez zero."
+#def dodaj(a, b):
+#    return a + b
+#def odejmij(a, b):
+#    return a - b
+#def pomnoz(a, b):
+#    return a * b   
+#def podziel(a, b):
+#    if b != 0:
+#        return a / b
+#    else:
+#        return "Błąd: Nie można dzielić przez zero."
 
-print("Wybierz działanie: (+, -, *, /)")
-znak = input("Podaj znak działania: ")
-try:
-    a = int(input("Podaj pierwszą liczbę: "))
-    b = int(input("Podaj drugą liczbę: "))
-except ValueError:
-    print("Błąd: Wprowadzono niepoprawną wartość. Proszę podać liczby.")
-    exit()
-if znak == "+":
-    print(f"Wynik dodawania: {dodaj(a, b)}")
-elif znak == "-":
-    print(f"Wynik odejmowania: {odejmij(a, b)}")
-elif znak == "*":   
-    print(f"Wynik mnożenia: {pomnoz(a, b)}")
-elif znak == "/":
-    print(f"Wynik dzielenia: {podziel(a, b)}")
-else:
-    print("Niepoprawny znak działania.")
+#print("Wybierz działanie: (+, -, *, /)")
+#znak = input("Podaj znak działania: ")
+#try:
+#    a = int(input("Podaj pierwszą liczbę: "))
+#    b = int(input("Podaj drugą liczbę: "))
+#except ValueError:
+#    print("Błąd: Wprowadzono niepoprawną wartość. Proszę podać liczby.")
+#    exit()
+#if znak == "+":
+#    print(f"Wynik dodawania: {dodaj(a, b)}")
+#elif znak == "-":
+#    print(f"Wynik odejmowania: {odejmij(a, b)}")
+#elif znak == "*":   
+#    print(f"Wynik mnożenia: {pomnoz(a, b)}")
+#elif znak == "/":
+#    print(f"Wynik dzielenia: {podziel(a, b)}")
+#else:
+#    print("Niepoprawny znak działania.")
+
+def sprawdz_wiek(wiek):
+    if wiek < 18:
+        return "Niepełnoletni"
+    else:
+        return "Pełnoletni"
+
+wiek = int(input("Podaj wiek: "))
+wynik = sprawdz_wiek(wiek)
+
+print(wynik)
