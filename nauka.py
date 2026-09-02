@@ -9,8 +9,12 @@
 
 #print(f"Dane: {imie} {nazwisko}, wiek: {wiek}")
 
-liczba1 = float(input("Podaj pierwszą liczbę: "))
-liczba2 = float(input("Podaj drugą liczbę: "))
+try: 
+    liczba1 = float(input("Podaj pierwszą liczbę: "))
+    liczba2 = float(input("Podaj drugą liczbę: "))
+except ValueError:
+    print("Błąd: Wprowadzono niepoprawną wartość. Proszę podać liczby.")
+    exit() //bez tego program pójdzie dalej i wyświetli błąd, bo nie będzie miał co dodać, odjąć, pomnożyć lub podzielić.
 
 znak = input("Podaj znak działania (+, -, *, /): ")
 
@@ -26,4 +30,5 @@ elif znak == "/":
     else:
         print("Błąd: Nie można dzielić przez zero.")
 else:
-    print("Niepoprawny znak działania, bądź liczby nie są liczbami.")
+    print("Niepoprawny znak działania`.")
+    
