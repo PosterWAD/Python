@@ -86,18 +86,31 @@
 
 #print(wynik)
 
-zawodnicy = ["Lewandowski", "Zieliński", "Szczęsny"]
-print("Lista zawodników:")
-for zawodnik in zawodnicy:
-    print(zawodnik)
+#zawodnicy = ["Lewandowski", "Zieliński", "Szczęsny"]
+#print("Lista zawodników:")
+#for zawodnik in zawodnicy:
+#    print(zawodnik)
 
-nowyZawodnik = input("Podaj nazwisko nowego zawodnika: ")
+#nowyZawodnik = input("Podaj nazwisko nowego zawodnika: ")
 
-zawodnicy.append(nowyZawodnik)
+#zawodnicy.append(nowyZawodnik)
 
-print("Lista zawodników po dodaniu nowego:")
-for zawodnik in zawodnicy:
-    print(zawodnik)
+#print("Lista zawodników po dodaniu nowego:")
+#for zawodnik in zawodnicy:
+#    print(zawodnik)
 
-    
+zawodnik = {
+    "imie": "Robert",
+    "nazwisko": "Lewandowski",
+    "wiek": 38,
+    "numer": 9,
+    "druzyna": "Polska"
+}
 
+print(f"Imie i nazwisko: {zawodnik['imie']} {zawodnik['nazwisko']}")
+print(f"Numer koszulki: {zawodnik['numer']}")
+
+pozycja = input("Podaj pozycję zawodnika: ")
+zawodnik["pozycja"] = pozycja
+
+print(zawodnik)
