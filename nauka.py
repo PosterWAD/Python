@@ -33,14 +33,12 @@
 #     print("Niepoprawny znak działania.")
 
 
-def hello():
-    print("Hi") 
+def osoba(imie, wiek):
+    print(f"Imię: {imie}, Wiek: {wiek}")
 
-hello()
 
-def hello2(name):
-    print(f"Hello, {name}!")
+imie = input("Podaj imię: ")
+wiek = int(input("Podaj wiek: "))
 
-hello2("Luke")
-name2 = input("Podaj imię: ")
-hello2(name2)
+osoba(imie, wiek)
+
