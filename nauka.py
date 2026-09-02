@@ -9,26 +9,27 @@
 
 #print(f"Dane: {imie} {nazwisko}, wiek: {wiek}")
 
-try: 
-    liczba1 = float(input("Podaj pierwszą liczbę: "))
-    liczba2 = float(input("Podaj drugą liczbę: "))
-except ValueError:
-    print("Błąd: Wprowadzono niepoprawną wartość. Proszę podać liczby.")
-    exit() //bez tego program pójdzie dalej i wyświetli błąd, bo nie będzie miał co dodać, odjąć, pomnożyć lub podzielić.
+# try:
+#     liczba1 = float(input("Podaj pierwszą liczbę: "))
+#     liczba2 = float(input("Podaj drugą liczbę: "))
+# except ValueError:
+#     print("Błąd: Wprowadzono niepoprawną wartość. Proszę podać liczby.")
+#     exit()  # Bez tego program pójdzie dalej i zgłosi błąd.
+#
+# znak = input("Podaj znak działania (+, -, *, /): ")
+#
+# if znak == "+":
+#     print(f"Wynik dodawania: {liczba1 + liczba2}")
+# elif znak == "-":
+#     print(f"Wynik odejmowania: {liczba1 - liczba2}")
+# elif znak == "*":
+#     print(f"Wynik mnożenia: {liczba1 * liczba2}")
+# elif znak == "/":
+#     if liczba2 != 0:
+#         print(f"Wynik dzielenia: {liczba1 / liczba2}")
+#     else:
+#         print("Błąd: Nie można dzielić przez zero.")
+# else:
+#     print("Niepoprawny znak działania.")
 
-znak = input("Podaj znak działania (+, -, *, /): ")
 
-if znak == "+":
-    print(f"Wynik dodawania: {liczba1 + liczba2}")
-elif znak == "-":
-    print(f"Wynik odejmowania: {liczba1 - liczba2}")
-elif znak == "*":
-    print(f"Wynik mnożenia: {liczba1 * liczba2}")
-elif znak == "/":
-    if liczba2 != 0:
-        print(f"Wynik dzielenia: {liczba1 / liczba2}")
-    else:
-        print("Błąd: Nie można dzielić przez zero.")
-else:
-    print("Niepoprawny znak działania.")
-    
