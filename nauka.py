@@ -87,11 +87,17 @@
 #print(wynik)
 
 zawodnicy = ["Lewandowski", "Zieliński", "Szczęsny"]
-print(zawodnicy[0])
-zawodnicy.append("Błaszczykowski")
-print(zawodnicy[3])
+print("Lista zawodników:")
+for zawodnik in zawodnicy:
+    print(zawodnik)
 
-for i in zawodnicy: #albo for zawodnik in zawodnicy:
-    print(i)
+nowyZawodnik = input("Podaj nazwisko nowego zawodnika: ")
+
+zawodnicy.append(nowyZawodnik)
+
+print("Lista zawodników po dodaniu nowego:")
+for zawodnik in zawodnicy:
+    print(zawodnik)
+
     
 
