@@ -73,13 +73,25 @@
 #else:
 #    print("Niepoprawny znak działania.")
 
-def sprawdz_wiek(wiek):
-    if wiek < 18:
-        return "Niepełnoletni"
-    else:
-        return "Pełnoletni"
+#def sprawdz_wiek(wiek):
+#    if wiek < 0:
+#        return "Niepoprawny wiek"
+#    elif wiek < 18:
+#        return "Niepełnoletni"
+#    else:
+#        return "Pełnoletni"
 
-wiek = int(input("Podaj wiek: "))
-wynik = sprawdz_wiek(wiek)
+#wiek = int(input("Podaj wiek: "))
+#wynik = sprawdz_wiek(wiek)
 
-print(wynik)
+#print(wynik)
+
+zawodnicy = ["Lewandowski", "Zieliński", "Szczęsny"]
+print(zawodnicy[0])
+zawodnicy.append("Błaszczykowski")
+print(zawodnicy[3])
+
+for i in zawodnicy: #albo for zawodnik in zawodnicy:
+    print(i)
+    
+
