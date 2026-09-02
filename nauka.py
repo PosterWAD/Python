@@ -33,3 +33,14 @@
 #     print("Niepoprawny znak działania.")
 
 
+def hello():
+    print("Hi") 
+
+hello()
+
+def hello2(name):
+    print(f"Hello, {name}!")
+
+hello2("Luke")
+name2 = input("Podaj imię: ")
+hello2(name2)
