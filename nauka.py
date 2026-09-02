@@ -99,18 +99,58 @@
 #for zawodnik in zawodnicy:
 #    print(zawodnik)
 
-zawodnik = {
-    "imie": "Robert",
-    "nazwisko": "Lewandowski",
-    "wiek": 38,
-    "numer": 9,
-    "druzyna": "Polska"
+#zawodnik = {
+#    "imie": "Robert",
+#    "nazwisko": "Lewandowski",
+#    "wiek": 38,
+#    "numer": 9,
+#    "druzyna": "Polska"
+#}
+
+#print(f"Imie i nazwisko: {zawodnik['imie']} {zawodnik['nazwisko']}")
+#print(f"Numer koszulki: {zawodnik['numer']}")
+
+#pozycja = input("Podaj pozycję zawodnika: ")
+#zawodnik["pozycja"] = pozycja 
+
+#print(zawodnik)
+
+
+zawodnicy = [
+    {
+        "imie": "Robert",
+        "nazwisko": "Lewandowski",
+        "numer": 9,
+        "drużyna": "Chicago Fire"
+    },
+    {
+        "imie": "Piotr",
+        "nazwisko": "Zieliński",
+        "numer": 20,
+        "drużyna": "Inter Mediolan"
+    },
+    {
+        "imie": "Wojciech",
+        "nazwisko": "Szczęsny",
+        "numer": 1,
+        "drużyna": "Barcelona"
+    }
+]
+
+print(zawodnicy[0]) 
+
+for zawodnik in zawodnicy:
+    print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
+
+nowy_zawodnik = {
+    "imie": input("Podaj imię nowego zawodnika: "),
+    "nazwisko": input("Podaj nazwisko nowego zawodnika: "),
+    "numer": int(input("Podaj numer nowego zawodnika: ")),  
+    "drużyna": input("Podaj drużynę nowego zawodnika: ")
 }
 
-print(f"Imie i nazwisko: {zawodnik['imie']} {zawodnik['nazwisko']}")
-print(f"Numer koszulki: {zawodnik['numer']}")
+zawodnicy.append(nowy_zawodnik)
 
-pozycja = input("Podaj pozycję zawodnika: ")
-zawodnik["pozycja"] = pozycja
-
-print(zawodnik)
+for zawodnik in zawodnicy:
+    print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
+    
