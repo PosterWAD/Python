@@ -15,18 +15,14 @@ liczba2 = float(input("Podaj drugą liczbę: "))
 znak = input("Podaj znak działania (+, -, *, /): ")
 
 if znak == "+":
-    wynik = liczba1 + liczba2
-    print(f"Wynik dodawania: {wynik}")
+    print(f"Wynik dodawania: {liczba1 + liczba2}")
 elif znak == "-":
-    wynik = liczba1 - liczba2
-    print(f"Wynik odejmowania: {wynik}")
+    print(f"Wynik odejmowania: {liczba1 - liczba2}")
 elif znak == "*":
-    wynik = liczba1 * liczba2
-    print(f"Wynik mnożenia: {wynik}")
+    print(f"Wynik mnożenia: {liczba1 * liczba2}")
 elif znak == "/":
     if liczba2 != 0:
-        wynik = liczba1 / liczba2
-        print(f"Wynik dzielenia: {wynik}")
+        print(f"Wynik dzielenia: {liczba1 / liczba2}")
     else:
         print("Błąd: Nie można dzielić przez zero.")
 else:
