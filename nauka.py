@@ -30,5 +30,5 @@ elif znak == "/":
     else:
         print("Błąd: Nie można dzielić przez zero.")
 else:
-    print("Niepoprawny znak działania`.")
+    print("Niepoprawny znak działania.")
     
