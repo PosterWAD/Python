@@ -4,4 +4,6 @@ print(f"Wybrane imie to: {imie}")
 nazwisko = input("Podaj nazwisko: ")
 print(f"Wybrane nazwisko to: {nazwisko}")
 
+wiek = input("Podaj wiek: ")
+print(f"Wybrany wiek to: {wiek}")
 
