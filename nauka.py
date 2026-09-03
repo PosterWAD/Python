@@ -154,21 +154,37 @@
 # for zawodnik in zawodnicy:
 #     print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
     
-pelnoletnia = True
-ma_bilet = True
+# pelnoletnia = True
+# ma_bilet = True
+#
+# osoba1_wiek = int(input("Podaj wiek osoby 1: "))
+# osoba1_bilet = int(input("Czy osoba 1 ma bilet? (1 - tak, 0 - nie): "))
+#
+# if osoba1_wiek < 18:
+#     pelnoletnia = False
+#     print("Osoba 1 jest niepełnoletnia.")
+# if osoba1_bilet == 0:
+#     ma_bilet = False
+#     print("Osoba 1 nie ma biletu.")
+#
+# if pelnoletnia == True and ma_bilet == True:
+#     print("Osoba 1 może wejść na koncert.")
+# else:
+#     print("Osoba 1 nie może wejść na koncert.")
 
-osoba1_wiek = int(input("Podaj wiek osoby 1: "))
-osoba1_bilet = int(input("Czy osoba 1 ma bilet? (1 - tak, 0 - nie): "))
+liczba = 1
 
-if osoba1_wiek < 18:
-    pelnoletnia = False
-    print("Osoba 1 jest niepełnoletnia.")
-if osoba1_bilet == 0:
-    ma_bilet = False
-    print("Osoba 1 nie ma biletu.")
+while liczba <= 10:
+    print(liczba)
+    liczba += 1
 
-if pelnoletnia == True and ma_bilet == True:
-    print("Osoba 1 może wejść na koncert.")
-else: 
-    print("Osoba 1 nie może wejść na koncert.")
+zgadywana_liczba = 7
 
+while zgadywana_liczba != liczba:
+    liczba = int(input("Zgadnij liczbę (1-10): "))
+    if liczba < zgadywana_liczba:
+        print("Za mało!")
+    elif liczba > zgadywana_liczba:
+        print("Za dużo!")
+    else:
+        print("Gratulacje! Zgadłeś liczbę.")
