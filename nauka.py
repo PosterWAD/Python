@@ -194,18 +194,30 @@ import random
 
 import random
 
-odpowiedz = "x"
-wynik = random.randint(1,10)
-liczba_prob = 0
-while odpowiedz != wynik:
-    odpowiedz = int(input("Zgadnij liczbę (1-10): "))
-    liczba_prob += 1
-    if liczba_prob == 5:
-        print("Przegrałeś! Przekroczyłeś limit prób.")
-        break
-    if odpowiedz < wynik:
-        print("Za mało!")
-    elif odpowiedz > wynik:
-        print("Za dużo!")
-    else:
-        print(f"Gratulacje! Zgadłeś liczbę za {liczba_prob} próbą.")
+# odpowiedz = "x"
+# wynik = random.randint(1, 10)
+# liczba_prob = 0
+# while odpowiedz != wynik:
+#     odpowiedz = int(input("Zgadnij liczbę (1-10): "))
+#     liczba_prob += 1
+#     if liczba_prob == 5:
+#         print("Przegrałeś! Przekroczyłeś limit prób.")
+#         break
+#     if odpowiedz < wynik:
+#         print("Za mało!")
+#     elif odpowiedz > wynik:
+#         print("Za dużo!")
+#     else:
+#         print(f"Gratulacje! Zgadłeś liczbę za {liczba_prob} próbą.")
+
+
+def punkty_za_wynik(gole_druzyny, gole_przeciwnika):
+    if gole_druzyny > gole_przeciwnika:
+        return 3
+    elif gole_druzyny == gole_przeciwnika:
+        return 1
+    else: #gole_druzyny < gole_przeciwnika
+        return 0
+
+punkty = print(f"Punkty zdobyte przez drużynę: {punkty_za_wynik(2, 1)}")
+
