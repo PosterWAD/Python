@@ -211,13 +211,39 @@ import random
 #         print(f"Gratulacje! Zgadłeś liczbę za {liczba_prob} próbą.")
 
 
-def punkty_za_wynik(gole_druzyny, gole_przeciwnika):
-    if gole_druzyny > gole_przeciwnika:
-        return 3
-    elif gole_druzyny == gole_przeciwnika:
-        return 1
-    else: #gole_druzyny < gole_przeciwnika
-        return 0
+# def punkty_za_wynik(gole_druzyny, gole_przeciwnika):
+#     if gole_druzyny > gole_przeciwnika:
+#         return 3
+#     elif gole_druzyny == gole_przeciwnika:
+#         return 1
+#     else:  # gole_druzyny < gole_przeciwnika
+#         return 0
+#
+# punkty = print(f"Punkty zdobyte przez drużynę: {punkty_za_wynik(2, 1)}")
 
-punkty = print(f"Punkty zdobyte przez drużynę: {punkty_za_wynik(2, 1)}")
 
+gole = [2, 1, 3, 0, 4]
+ilosc_meczy = len(gole)
+print(f"Ilość meczów: {ilosc_meczy}")
+
+def suma_goli(lista_goli):
+    suma = 0
+    for gol in lista_goli:
+        suma += gol
+    return suma
+
+print(f"Suma goli: {suma_goli(gole)}")
+
+def srednia_goli(lista_goli):
+    return suma_goli(lista_goli) / len(lista_goli)
+
+print(f"Średnia goli na mecz: {srednia_goli(gole)}")
+
+def max_goli(lista_goli):
+    return max(lista_goli)
+
+def min_goli(lista_goli):
+    return min(lista_goli)
+
+print(f"Maksymalna liczba goli w meczu: {max_goli(gole)}")
+print(f"Minimalna liczba goli w meczu: {min_goli(gole)}")
