@@ -116,41 +116,59 @@
 #print(zawodnik)
 
 
-zawodnicy = [
-    {
-        "imie": "Robert",
-        "nazwisko": "Lewandowski",
-        "numer": 9,
-        "drużyna": "Chicago Fire"
-    },
-    {
-        "imie": "Piotr",
-        "nazwisko": "Zieliński",
-        "numer": 20,
-        "drużyna": "Inter Mediolan"
-    },
-    {
-        "imie": "Wojciech",
-        "nazwisko": "Szczęsny",
-        "numer": 1,
-        "drużyna": "Barcelona"
-    }
-]
-
-print(zawodnicy[0]) 
-
-for zawodnik in zawodnicy:
-    print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
-
-nowy_zawodnik = {
-    "imie": input("Podaj imię nowego zawodnika: "),
-    "nazwisko": input("Podaj nazwisko nowego zawodnika: "),
-    "numer": int(input("Podaj numer nowego zawodnika: ")),  
-    "drużyna": input("Podaj drużynę nowego zawodnika: ")
-}
-
-zawodnicy.append(nowy_zawodnik)
-
-for zawodnik in zawodnicy:
-    print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
+# zawodnicy = [
+#     {
+#         "imie": "Robert",
+#         "nazwisko": "Lewandowski",
+#         "numer": 9,
+#         "drużyna": "Chicago Fire"
+#     },
+#     {
+#         "imie": "Piotr",
+#         "nazwisko": "Zieliński",
+#         "numer": 20,
+#         "drużyna": "Inter Mediolan"
+#     },
+#     {
+#         "imie": "Wojciech",
+#         "nazwisko": "Szczęsny",
+#         "numer": 1,
+#         "drużyna": "Barcelona"
+#     }
+# ]
+#
+# print(zawodnicy[0])
+#
+# for zawodnik in zawodnicy:
+#     print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
+#
+# nowy_zawodnik = {
+#     "imie": input("Podaj imię nowego zawodnika: "),
+#     "nazwisko": input("Podaj nazwisko nowego zawodnika: "),
+#     "numer": int(input("Podaj numer nowego zawodnika: ")),
+#     "drużyna": input("Podaj drużynę nowego zawodnika: ")
+# }
+#
+# zawodnicy.append(nowy_zawodnik)
+#
+# for zawodnik in zawodnicy:
+#     print(f" Imię: {zawodnik['imie']},\n Nazwisko: {zawodnik['nazwisko']},\n Numer: {zawodnik['numer']}, \n Drużyna: {zawodnik['drużyna']}")
     
+pelnoletnia = True
+ma_bilet = True
+
+osoba1_wiek = int(input("Podaj wiek osoby 1: "))
+osoba1_bilet = int(input("Czy osoba 1 ma bilet? (1 - tak, 0 - nie): "))
+
+if osoba1_wiek < 18:
+    pelnoletnia = False
+    print("Osoba 1 jest niepełnoletnia.")
+if osoba1_bilet == 0:
+    ma_bilet = False
+    print("Osoba 1 nie ma biletu.")
+
+if pelnoletnia == True and ma_bilet == True:
+    print("Osoba 1 może wejść na koncert.")
+else: 
+    print("Osoba 1 nie może wejść na koncert.")
+
