@@ -192,5 +192,17 @@ import random
 #         print("Gratulacje! Zgadłeś liczbę.")
 
 
+import random
 
+odpowiedz = "x"
+wynik = random.randint(1,10)
+
+while odpowiedz != wynik:
+    odpowiedz = int(input("Zgadnij liczbę (1-10): "))
+    if odpowiedz < wynik:
+        print("Za mało!")
+    elif odpowiedz > wynik:
+        print("Za dużo!")
+    else:
+        print("Gratulacje! Zgadłeś liczbę.")
 
