@@ -200,7 +200,7 @@ liczba_prob = 0
 while odpowiedz != wynik:
     odpowiedz = int(input("Zgadnij liczbę (1-10): "))
     liczba_prob += 1
-    if liczba_prob >= 5:
+    if liczba_prob == 5:
         print("Przegrałeś! Przekroczyłeś limit prób.")
         break
     if odpowiedz < wynik:
