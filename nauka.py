@@ -1,3 +1,5 @@
+import random
+
 #imie = input("Podaj imię: ")
 #print(f"Wybrane imie to: {imie}")
 
@@ -172,19 +174,23 @@
 # else:
 #     print("Osoba 1 nie może wejść na koncert.")
 
-liczba = 1
+# liczba = 1
+#
+# while liczba <= 10:
+#     print(liczba)
+#     liczba += 1
+#
+# zgadywana_liczba = 7
+#
+# while zgadywana_liczba != liczba:
+#     liczba = int(input("Zgadnij liczbę (1-10): "))
+#     if liczba < zgadywana_liczba:
+#         print("Za mało!")
+#     elif liczba > zgadywana_liczba:
+#         print("Za dużo!")
+#     else:
+#         print("Gratulacje! Zgadłeś liczbę.")
 
-while liczba <= 10:
-    print(liczba)
-    liczba += 1
 
-zgadywana_liczba = 7
 
-while zgadywana_liczba != liczba:
-    liczba = int(input("Zgadnij liczbę (1-10): "))
-    if liczba < zgadywana_liczba:
-        print("Za mało!")
-    elif liczba > zgadywana_liczba:
-        print("Za dużo!")
-    else:
-        print("Gratulacje! Zgadłeś liczbę.")
+
