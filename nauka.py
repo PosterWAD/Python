@@ -249,15 +249,35 @@ import random
 # print(f"Minimalna liczba goli w meczu: {min_goli(gole)}")
 
 
-gole = [2, 1, 2, 0, 3, 2, 1]
+# gole = [2, 1, 2, 0, 3, 2, 1]
+#
+# mecze_z_wieloma_golami = []
+#
+# def znajdz_mecze_z_wieloma_golami(lista_goli, prog_goli):
+#     for gol in lista_goli:
+#         if gol > prog_goli:
+#             mecze_z_wieloma_golami.append(gol)
+#     return mecze_z_wieloma_golami
+#
+# print(f"Mecze z wieloma golami (więcej niż 1): {znajdz_mecze_z_wieloma_golami(gole, 1)}. Takich meczy było {len(mecze_z_wieloma_golami)}.")
 
-mecze_z_wieloma_golami = []
+sklep = {
+    "owoce": ["jabłko", "banan"],
+    "warzywa": ["marchew", "ziemniak"],
+    "napoje": ["woda", "sok"]
+}
 
-def znajdz_mecze_z_wieloma_golami(lista_goli, prog_goli):
-    for gol in lista_goli:
-        if gol > prog_goli:
-            mecze_z_wieloma_golami.append(gol)
-    return mecze_z_wieloma_golami
+print(sklep["owoce"])
 
-print(f"Mecze z wieloma golami (więcej niż 1): {znajdz_mecze_z_wieloma_golami(gole, 1)}. Takich meczy było {len(mecze_z_wieloma_golami)}.")
+sklep["owoce"].append("gruszka")
+print(sklep["owoce"])
+
+for nazwa, produkty in sklep.items():
+    print(nazwa)
+    print(produkty)
+
+for nazwa, produkty in sklep.items():
+    print(f"Kategoria: {nazwa}")
+    for produkt in produkty:
+        print(f" - {produkt}")
 
