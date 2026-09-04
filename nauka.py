@@ -249,7 +249,7 @@ import random
 # print(f"Minimalna liczba goli w meczu: {min_goli(gole)}")
 
 
-gole = [2, 1, 3, 0, 4, 5, 1]
+gole = [2, 1, 2, 0, 3, 2, 1]
 
 mecze_z_wieloma_golami = []
 
@@ -260,3 +260,4 @@ def znajdz_mecze_z_wieloma_golami(lista_goli, prog_goli):
     return mecze_z_wieloma_golami
 
 print(f"Mecze z wieloma golami (więcej niż 1): {znajdz_mecze_z_wieloma_golami(gole, 1)}. Takich meczy było {len(mecze_z_wieloma_golami)}.")
+
