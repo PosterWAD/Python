@@ -222,28 +222,41 @@ import random
 # punkty = print(f"Punkty zdobyte przez drużynę: {punkty_za_wynik(2, 1)}")
 
 
-gole = [2, 1, 3, 0, 4]
-ilosc_meczy = len(gole)
-print(f"Ilość meczów: {ilosc_meczy}")
+# gole = [2, 1, 3, 0, 4]
+# ilosc_meczy = len(gole)
+# print(f"Ilość meczów: {ilosc_meczy}")
+#
+# def suma_goli(lista_goli):
+#     suma = 0
+#     for gol in lista_goli:
+#         suma += gol
+#     return suma
+#
+# print(f"Suma goli: {suma_goli(gole)}")
+#
+# def srednia_goli(lista_goli):
+#     return suma_goli(lista_goli) / len(lista_goli)
+#
+# print(f"Średnia goli na mecz: {srednia_goli(gole)}")
+#
+# def max_goli(lista_goli):
+#     return max(lista_goli)
+#
+# def min_goli(lista_goli):
+#     return min(lista_goli)
+#
+# print(f"Maksymalna liczba goli w meczu: {max_goli(gole)}")
+# print(f"Minimalna liczba goli w meczu: {min_goli(gole)}")
 
-def suma_goli(lista_goli):
-    suma = 0
+
+gole = [2, 1, 3, 0, 4, 5, 1]
+
+mecze_z_wieloma_golami = []
+
+def znajdz_mecze_z_wieloma_golami(lista_goli, prog_goli):
     for gol in lista_goli:
-        suma += gol
-    return suma
+        if gol > prog_goli:
+            mecze_z_wieloma_golami.append(gol)
+    return mecze_z_wieloma_golami
 
-print(f"Suma goli: {suma_goli(gole)}")
-
-def srednia_goli(lista_goli):
-    return suma_goli(lista_goli) / len(lista_goli)
-
-print(f"Średnia goli na mecz: {srednia_goli(gole)}")
-
-def max_goli(lista_goli):
-    return max(lista_goli)
-
-def min_goli(lista_goli):
-    return min(lista_goli)
-
-print(f"Maksymalna liczba goli w meczu: {max_goli(gole)}")
-print(f"Minimalna liczba goli w meczu: {min_goli(gole)}")
+print(f"Mecze z wieloma golami (więcej niż 1): {znajdz_mecze_z_wieloma_golami(gole, 1)}. Takich meczy było {len(mecze_z_wieloma_golami)}.")
