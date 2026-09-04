@@ -281,3 +281,21 @@ for nazwa, produkty in sklep.items():
     for produkt in produkty:
         print(f" - {produkt}")
 
+biblioteka = {
+    "fantasy": ["Hobbit", "Harry Potter"],
+    "kryminal": ["Sherlock Holmes", "Morderstwo w Orient Expressie"],
+    "science fiction": ["Diuna", "Solaris"]
+}
+
+for gatunek in biblioteka.items():
+    print(f"Gatunek: {gatunek[0]}")
+
+nowy_gatunek = input("Podaj nowy gatunek: ")
+nowa_ksiazka = input("Podaj tytuł nowej książki: ")
+
+biblioteka[nowy_gatunek] = [nowa_ksiazka] 
+
+for gatunek, ksiazki in biblioteka.items():
+    print(f"Gatunek: {gatunek}")
+    for ksiazka in ksiazki:
+        print(f" - {ksiazka}")
