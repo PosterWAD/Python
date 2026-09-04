@@ -261,25 +261,47 @@ import random
 #
 # print(f"Mecze z wieloma golami (więcej niż 1): {znajdz_mecze_z_wieloma_golami(gole, 1)}. Takich meczy było {len(mecze_z_wieloma_golami)}.")
 
-sklep = {
-    "owoce": ["jabłko", "banan"],
-    "warzywa": ["marchew", "ziemniak"],
-    "napoje": ["woda", "sok"]
-}
+#sklep = {
+#    "owoce": ["jabłko", "banan"],
+#    "warzywa": ["marchew", "ziemniak"],
+#    "napoje": ["woda", "sok"]
+# }
 
-print(sklep["owoce"])
+#print(sklep["owoce"])
 
-sklep["owoce"].append("gruszka")
-print(sklep["owoce"])
+#sklep["owoce"].append("gruszka")
+#print(sklep["owoce"])
 
-for nazwa, produkty in sklep.items():
-    print(nazwa)
-    print(produkty)
+#for nazwa, produkty in sklep.items():
+#    print(nazwa)
+#    print(produkty)
 
-for nazwa, produkty in sklep.items():
-    print(f"Kategoria: {nazwa}")
-    for produkt in produkty:
-        print(f" - {produkt}")
+#for nazwa, produkty in sklep.items():
+#    print(f"Kategoria: {nazwa}")
+#    for produkt in produkty:
+#        print(f" - {produkt}")
+
+# biblioteka = {
+#     "fantasy": ["Hobbit", "Harry Potter"],
+#     "kryminal": ["Sherlock Holmes", "Morderstwo w Orient Expressie"],
+#     "science fiction": ["Diuna", "Solaris"]
+# }
+#
+# for gatunek in biblioteka.items():
+#     print(f"Gatunek: {gatunek[0]}")
+#
+# nowy_gatunek = input("Podaj nowy gatunek: ")
+# nowa_ksiazka = input("Podaj tytuł nowej książki: ")
+#
+# if nowy_gatunek in biblioteka:
+#     biblioteka[nowy_gatunek].append(nowa_ksiazka)
+# else:
+#     biblioteka[nowy_gatunek] = [nowa_ksiazka]
+#
+# for gatunek, ksiazki in biblioteka.items():
+#     print(f"Gatunek: {gatunek}")
+#     for ksiazka in ksiazki:
+#         print(f" - {ksiazka}")
 
 biblioteka = {
     "fantasy": ["Hobbit", "Harry Potter"],
@@ -287,14 +309,17 @@ biblioteka = {
     "science fiction": ["Diuna", "Solaris"]
 }
 
-for gatunek in biblioteka.items():
-    print(f"Gatunek: {gatunek[0]}")
+gatunek = input("Podaj gatunek: ")
+ksiazka = input("Podaj książkę do usunięcia: ")
 
-nowy_gatunek = input("Podaj nowy gatunek: ")
-nowa_ksiazka = input("Podaj tytuł nowej książki: ")
+biblioteka[gatunek] = [ksiazka]
+for gatunek, ksiazki in biblioteka.items():
+    print(f"Gatunek: {gatunek}")
+    for ksiazka in ksiazki:
+        print(f" - {ksiazka}")
 
-biblioteka[nowy_gatunek] = [nowa_ksiazka] 
-
+biblioteka[gatunek].remove(ksiazka)
+print(f"Książka '{ksiazka}' została usunięta z gatunku '{gatunek}'.")
 for gatunek, ksiazki in biblioteka.items():
     print(f"Gatunek: {gatunek}")
     for ksiazka in ksiazki:
