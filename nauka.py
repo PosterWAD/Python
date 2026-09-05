@@ -309,18 +309,23 @@ biblioteka = {
     "science fiction": ["Diuna", "Solaris"]
 }
 
-gatunek = input("Podaj gatunek: ")
-ksiazka = input("Podaj książkę do usunięcia: ")
+nowy_gatunek = input("Podaj gatunek: ")
+nowa_ksiazka = input("Podaj książkę do usunięcia: ")
+if nowy_gatunek in biblioteka:
+    biblioteka[nowy_gatunek].append(nowa_ksiazka)
+else:
+    biblioteka[nowy_gatunek] = [nowa_ksiazka]
 
-biblioteka[gatunek] = [ksiazka]
 for gatunek, ksiazki in biblioteka.items():
     print(f"Gatunek: {gatunek}")
     for ksiazka in ksiazki:
         print(f" - {ksiazka}")
 
-biblioteka[gatunek].remove(ksiazka)
-print(f"Książka '{ksiazka}' została usunięta z gatunku '{gatunek}'.")
+biblioteka[nowy_gatunek].remove(nowa_ksiazka)
+print(f"Książka '{nowa_ksiazka}' została usunięta z gatunku '{nowy_gatunek}'.")
 for gatunek, ksiazki in biblioteka.items():
     print(f"Gatunek: {gatunek}")
     for ksiazka in ksiazki:
         print(f" - {ksiazka}")
+
+
