@@ -303,26 +303,52 @@ import random
 #     for ksiazka in ksiazki:
 #         print(f" - {ksiazka}")
 
+# biblioteka = {
+#     "fantasy": ["Hobbit", "Harry Potter"],
+#     "kryminal": ["Sherlock Holmes", "Morderstwo w Orient Expressie"],
+#     "science fiction": ["Diuna", "Solaris"]
+# }
+#
+# nowy_gatunek = input("Podaj gatunek: ")
+# nowa_ksiazka = input("Podaj książkę do usunięcia: ")
+# if nowy_gatunek in biblioteka:
+#     biblioteka[nowy_gatunek].append(nowa_ksiazka)
+# else:
+#     biblioteka[nowy_gatunek] = [nowa_ksiazka]
+#
+# for gatunek, ksiazki in biblioteka.items():
+#     print(f"Gatunek: {gatunek}")
+#     for ksiazka in ksiazki:
+#         print(f" - {ksiazka}")
+#
+# biblioteka[nowy_gatunek].remove(nowa_ksiazka)
+# print(f"Książka '{nowa_ksiazka}' została usunięta z gatunku '{nowy_gatunek}'.")
+# for gatunek, ksiazki in biblioteka.items():
+#     print(f"Gatunek: {gatunek}")
+#     for ksiazka in ksiazki:
+#         print(f" - {ksiazka}")
+
+def dodaj_ksiazke(biblioteka, gatunek, ksiazka):
+    if gatunek in biblioteka:
+        biblioteka[gatunek].append(ksiazka)
+    else:
+        biblioteka[gatunek] = [ksiazka]
+
+def usun_ksiazke(biblioteka, gatunek, ksiazka):
+    if gatunek in biblioteka and ksiazka in biblioteka[gatunek]:
+        biblioteka[gatunek].remove(ksiazka)
+        if not biblioteka[gatunek]:  # jeśli lista jest pusta, usuń gatunek
+            del biblioteka[gatunek]
+
 biblioteka = {
-    "fantasy": ["Hobbit", "Harry Potter"],
+    "fantasy": ["Hobbit", "Harry Potter"], 
     "kryminal": ["Sherlock Holmes", "Morderstwo w Orient Expressie"],
     "science fiction": ["Diuna", "Solaris"]
 }
 
-nowy_gatunek = input("Podaj gatunek: ")
-nowa_ksiazka = input("Podaj książkę do usunięcia: ")
-if nowy_gatunek in biblioteka:
-    biblioteka[nowy_gatunek].append(nowa_ksiazka)
-else:
-    biblioteka[nowy_gatunek] = [nowa_ksiazka]
+dodaj_ksiazke(biblioteka, "fantasy", "Władca Pierścieni")
+usun_ksiazke(biblioteka, "fantasy", "Hobbit")
 
-for gatunek, ksiazki in biblioteka.items():
-    print(f"Gatunek: {gatunek}")
-    for ksiazka in ksiazki:
-        print(f" - {ksiazka}")
-
-biblioteka[nowy_gatunek].remove(nowa_ksiazka)
-print(f"Książka '{nowa_ksiazka}' została usunięta z gatunku '{nowy_gatunek}'.")
 for gatunek, ksiazki in biblioteka.items():
     print(f"Gatunek: {gatunek}")
     for ksiazka in ksiazki:
