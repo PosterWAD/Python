@@ -376,3 +376,10 @@ while wybor != 0:
             print(f"Gatunek: {gatunek}")
             for ksiazka in ksiazki:
                 print(f" - {ksiazka}")
+    elif wybor == 2:
+        gatunek = input("Podaj gatunek: ")
+        ksiazka = input("Podaj tytuł książki: ")
+        if gatunek in biblioteka:
+            biblioteka[gatunek].append(ksiazka)
+        else:
+            biblioteka[gatunek] = [ksiazka]
