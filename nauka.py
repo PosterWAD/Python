@@ -400,10 +400,13 @@ while True:
 
         if wiek < 0:
             print("Niepoprawny wiek. Wiek nie może być ujemny.")
+            continue
         elif wiek < 18:
             print("Niepełnoletni")
+            #albo zamiast dać break poza można dać tutaj
         else:
             print("Pełnoletni")
-        break  # Wyjście z pętli, jeśli dane są poprawne
+            #oraz można dać break tutaj
+        break
     except ValueError:
         print("Niepoprawna wartość. Proszę podać liczbę całkowitą.")
