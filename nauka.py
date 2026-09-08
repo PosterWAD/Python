@@ -383,3 +383,13 @@ while wybor != 0:
             biblioteka[gatunek].append(ksiazka)
         else:
             biblioteka[gatunek] = [ksiazka]
+    elif wybor == 3:
+        gatunek = input("Podaj gatunek: ")
+        ksiazka = input("Podaj tytuł książki do usunięcia: ")
+        if gatunek in biblioteka and ksiazka in biblioteka[gatunek]:
+            biblioteka[gatunek].remove(ksiazka)
+    elif wybor == 0:
+        print("Do widzenia!")
+        break
+    else:
+        print("Niepoprawny wybór. Spróbuj ponownie.")
