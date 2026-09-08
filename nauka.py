@@ -371,3 +371,8 @@ while wybor != 0:
     print("0. Wyjście")
     wybor = int(input("Wybierz opcję: "))
 
+    if wybor == 1:
+        for gatunek, ksiazki in biblioteka.items():
+            print(f"Gatunek: {gatunek}")
+            for ksiazka in ksiazki:
+                print(f" - {ksiazka}")
