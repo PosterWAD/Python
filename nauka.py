@@ -394,4 +394,16 @@ import random
 #     else:
 #         print("Niepoprawny wybór. Spróbuj ponownie.")
 
+while True:
+    try:
+        wiek = int(input("Podaj wiek: "))
 
+        if wiek < 0:
+            print("Niepoprawny wiek. Wiek nie może być ujemny.")
+        elif wiek < 18:
+            print("Niepełnoletni")
+        else:
+            print("Pełnoletni")
+        break  # Wyjście z pętli, jeśli dane są poprawne
+    except ValueError:
+        print("Niepoprawna wartość. Proszę podać liczbę całkowitą.")
