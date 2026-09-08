@@ -355,41 +355,43 @@ import random
 #         print(f" - {ksiazka}")
 
 
-biblioteka = {
-    "fantasy": ["Hobbit", "Harry Potter"],
-    "kryminal": ["Sherlock Holmes"],
-    "science fiction": ["Diuna"]
-}
+# biblioteka = {
+#     "fantasy": ["Hobbit", "Harry Potter"],
+#     "kryminal": ["Sherlock Holmes"],
+#     "science fiction": ["Diuna"]
+# }
+#
+# wybor = -1
+#
+# while wybor != 0:
+#     print("\nMenu:")
+#     print("1. Wyświetl wszystkie książki")
+#     print("2. Dodaj książkę")
+#     print("3. Usuń książkę")
+#     print("0. Wyjście")
+#     wybor = int(input("Wybierz opcję: "))
+#
+#     if wybor == 1:
+#         for gatunek, ksiazki in biblioteka.items():
+#             print(f"Gatunek: {gatunek}")
+#             for ksiazka in ksiazki:
+#                 print(f" - {ksiazka}")
+#     elif wybor == 2:
+#         gatunek = input("Podaj gatunek: ")
+#         ksiazka = input("Podaj tytuł książki: ")
+#         if gatunek in biblioteka:
+#             biblioteka[gatunek].append(ksiazka)
+#         else:
+#             biblioteka[gatunek] = [ksiazka]
+#     elif wybor == 3:
+#         gatunek = input("Podaj gatunek: ")
+#         ksiazka = input("Podaj tytuł książki do usunięcia: ")
+#         if gatunek in biblioteka and ksiazka in biblioteka[gatunek]:
+#             biblioteka[gatunek].remove(ksiazka)
+#     elif wybor == 0:
+#         print("Do widzenia!")
+#         break
+#     else:
+#         print("Niepoprawny wybór. Spróbuj ponownie.")
 
-wybor = -1
 
-while wybor != 0:
-    print("\nMenu:")
-    print("1. Wyświetl wszystkie książki")
-    print("2. Dodaj książkę")
-    print("3. Usuń książkę")
-    print("0. Wyjście")
-    wybor = int(input("Wybierz opcję: "))
-
-    if wybor == 1:
-        for gatunek, ksiazki in biblioteka.items():
-            print(f"Gatunek: {gatunek}")
-            for ksiazka in ksiazki:
-                print(f" - {ksiazka}")
-    elif wybor == 2:
-        gatunek = input("Podaj gatunek: ")
-        ksiazka = input("Podaj tytuł książki: ")
-        if gatunek in biblioteka:
-            biblioteka[gatunek].append(ksiazka)
-        else:
-            biblioteka[gatunek] = [ksiazka]
-    elif wybor == 3:
-        gatunek = input("Podaj gatunek: ")
-        ksiazka = input("Podaj tytuł książki do usunięcia: ")
-        if gatunek in biblioteka and ksiazka in biblioteka[gatunek]:
-            biblioteka[gatunek].remove(ksiazka)
-    elif wybor == 0:
-        print("Do widzenia!")
-        break
-    else:
-        print("Niepoprawny wybór. Spróbuj ponownie.")
