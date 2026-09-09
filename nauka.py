@@ -425,6 +425,4 @@ import random
 # print(f"Średnia: {srednia(lista_liczba)}")
 # print(f"Max liczba: {max(lista_liczba)}, min liczba: {min(lista_liczba)}")
 
-
-def suma_parzystych(lista):
-    
+lista = 
