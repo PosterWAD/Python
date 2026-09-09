@@ -410,3 +410,20 @@ while True:
         break
     except ValueError:
         print("Niepoprawna wartość. Proszę podać liczbę całkowitą.")
+
+def srednia(lista):
+    if len(lista) == 0:
+        return 0
+    return sum(lista) / len(lista)
+
+
+lista_liczba = []
+suma = 0
+for liczba in range(1, 6):
+    podaj_liczbe = int(input(f"Podaj liczbę {liczba}: "))
+    lista_liczba.append(podaj_liczbe)
+    suma += podaj_liczbe
+
+print(f"Suma: {suma}")
+print(f"Średnia: {srednia(lista_liczba)}")
+print(f"Max liczba: {max(lista_liczba)}, min liczba: {min(lista_liczba)}")
