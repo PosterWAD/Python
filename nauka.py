@@ -191,9 +191,6 @@ import random
 #     else:
 #         print("Gratulacje! Zgadłeś liczbę.")
 
-
-import random
-
 # odpowiedz = "x"
 # wynik = random.randint(1, 10)
 # liczba_prob = 0
@@ -394,36 +391,40 @@ import random
 #     else:
 #         print("Niepoprawny wybór. Spróbuj ponownie.")
 
-while True:
-    try:
-        wiek = int(input("Podaj wiek: "))
+# while True:
+#     try:
+#         wiek = int(input("Podaj wiek: "))
+#
+#         if wiek < 0:
+#             print("Niepoprawny wiek. Wiek nie może być ujemny.")
+#             continue
+#         elif wiek < 18:
+#             print("Niepełnoletni")
+#             #albo zamiast dać break poza można dać tutaj
+#         else:
+#             print("Pełnoletni")
+#             #oraz można dać break tutaj
+#         break
+#     except ValueError:
+#         print("Niepoprawna wartość. Proszę podać liczbę całkowitą.")
+#
+# def srednia(lista):
+#     if len(lista) == 0:
+#         return 0
+#     return sum(lista) / len(lista)
+#
+#
+# lista_liczba = []
+# suma = 0
+# for liczba in range(1, 6):
+#     podaj_liczbe = int(input(f"Podaj liczbę {liczba}: "))
+#     lista_liczba.append(podaj_liczbe)
+#     suma += podaj_liczbe
+#
+# print(f"Suma: {suma}")
+# print(f"Średnia: {srednia(lista_liczba)}")
+# print(f"Max liczba: {max(lista_liczba)}, min liczba: {min(lista_liczba)}")
 
-        if wiek < 0:
-            print("Niepoprawny wiek. Wiek nie może być ujemny.")
-            continue
-        elif wiek < 18:
-            print("Niepełnoletni")
-            #albo zamiast dać break poza można dać tutaj
-        else:
-            print("Pełnoletni")
-            #oraz można dać break tutaj
-        break
-    except ValueError:
-        print("Niepoprawna wartość. Proszę podać liczbę całkowitą.")
 
-def srednia(lista):
-    if len(lista) == 0:
-        return 0
-    return sum(lista) / len(lista)
-
-
-lista_liczba = []
-suma = 0
-for liczba in range(1, 6):
-    podaj_liczbe = int(input(f"Podaj liczbę {liczba}: "))
-    lista_liczba.append(podaj_liczbe)
-    suma += podaj_liczbe
-
-print(f"Suma: {suma}")
-print(f"Średnia: {srednia(lista_liczba)}")
-print(f"Max liczba: {max(lista_liczba)}, min liczba: {min(lista_liczba)}")
+def suma_parzystych(lista):
+    
