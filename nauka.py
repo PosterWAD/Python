@@ -425,4 +425,13 @@ import random
 # print(f"Średnia: {srednia(lista_liczba)}")
 # print(f"Max liczba: {max(lista_liczba)}, min liczba: {min(lista_liczba)}")
 
-lista = 
+def suma_parzystych(lista):
+    suma = 0
+    for liczba in lista:
+        if liczba % 2 == 0:
+            suma += liczba
+    return suma
+
+lista_liczb = [1,2,3,4,5,6,7,8,9,10]
+
+print(f"Suma liczb parzystych: {suma_parzystych(lista_liczb)}")
