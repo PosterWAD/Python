@@ -510,3 +510,32 @@ import math
 # waga = float(input("Podaj wagę w kg: "))
 # wzrost = float(input("Podaj wzrost w metrach: "))
 # print(BMI(waga,wzrost))
+
+
+class Team:
+    def __init__(self, name):
+        self.name = name
+        self.players = []
+    
+    def add_player(self, player):
+        self.players.append(player)
+        print(f"Zawodnik {player} został dodany do drużyny {self.name}")
+    
+    def remove_player(self, player):
+        if player in self.players:
+            self.players.remove(player)
+            print(f"Zawodnik {player} został usunięty z drużyny {self.name}")
+        else:
+            print(f"Zawodnik {player} nie został znaleziony w drużynie {self.name}")
+    
+    def display_players(self):
+        print(f"Zawodnicy drużyny {self.name}:")
+        for player in self.players:
+            print(f" - {player}")
+
+druzyna = Team("Barcelona")
+druzyna.add_player("Raphinha")
+druzyna.display_players()
+druzyna.add_player("Lamine Yamal")
+druzyna.remove_player("Raphinha")
+druzyna.display_players()
