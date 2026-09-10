@@ -460,3 +460,30 @@ players = [1,2,3]
 
 for player in players:
     print(f"Numer zawodnika: {player}")
+
+def czy_parzysta(podana_liczba):
+    if podana_liczba % 2 == 0:
+        return True
+    else:
+        return False
+def czy_dodatnia(podana_liczba):
+    if podana_liczba > 0:
+        print(f"Liczba {podana_liczba} jest dodatnia")
+    elif podana_liczba < 0:
+        print(f"Liczba {podana_liczba} jest ujemna")
+    else:
+        print("Liczba jest zerem")
+
+liczba = int(input("Podaj liczbe: "))
+if czy_parzysta(liczba):
+    print(f"Liczba {liczba} jest parzysta")
+else:
+    print(f"Liczba {liczba} jest nieparzysta")
+czy_dodatnia(liczba)
+
+if liczba > 10:
+    print(f"Liczba {liczba} jest większa od 10")
+elif liczba < 10:
+    print(f"Liczba {liczba} jest mniejsza od 10")
+else:
+    print(f"Liczba {liczba} jest równa 10")
