@@ -496,18 +496,17 @@ import math
 # r = float(input("Podaj promień: "))
 # print(f"Pole koła o promieniu {r} wynosi {pole_kola(r)}")
 
-def BMI(waga,wzrost):
-    bmi = waga / (wzrost **2)
-    if bmi < 18.5:
-        return f"Niedowaga, Twoje BMI to {bmi}"
-    elif bmi < 25:
-        return f"Waga prawidłowa, Twoje BMI to {bmi:.2f}"
-    elif bmi < 30:
-        return f"Nadwaga, Twoje BMI to {bmi:.2f}"
-    else:
-        return f"Otyłość, Twoje BMI to {bmi:.2f}"
-
-waga = float(input("Podaj wagę w kg: "))
-wzrost = float(input("Podaj wzrost w metrach: "))
-print(BMI(waga,wzrost))
-    
+# def BMI(waga,wzrost):
+#     bmi = waga / (wzrost **2)
+#     if bmi < 18.5:
+#         return f"Niedowaga, Twoje BMI to {bmi}"
+#     elif bmi < 25:
+#         return f"Waga prawidłowa, Twoje BMI to {bmi:.2f}"
+#     elif bmi < 30:
+#         return f"Nadwaga, Twoje BMI to {bmi:.2f}"
+#     else:
+#         return f"Otyłość, Twoje BMI to {bmi:.2f}"
+#
+# waga = float(input("Podaj wagę w kg: "))
+# wzrost = float(input("Podaj wzrost w metrach: "))
+# print(BMI(waga,wzrost))
