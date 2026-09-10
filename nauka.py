@@ -511,6 +511,46 @@ import math
 # wzrost = float(input("Podaj wzrost w metrach: "))
 # print(BMI(waga,wzrost))
 
+# class Team:
+#     def __init__(self, name):
+#         self.name = name
+#         self.players = []
+#
+#     def add_player(self, player):
+#         self.players.append(player)
+#         print(f"Zawodnik {player} został dodany do drużyny {self.name}")
+#
+#     def remove_player(self, player):
+#         if player in self.players:
+#             self.players.remove(player)
+#             print(f"Zawodnik {player} został usunięty z drużyny {self.name}")
+#         else:
+#             print(f"Zawodnik {player} nie został znaleziony w drużynie {self.name}")
+#
+#     def display_players(self):
+#         print(f"Zawodnicy drużyny {self.name}:")
+#         for player in self.players:
+#             print(f" - {player}")
+#
+# druzyna = Team("Barcelona")
+# druzyna.add_player("Raphinha")
+# druzyna.display_players()
+# druzyna.add_player("Lamine Yamal")
+# druzyna.remove_player("Raphinha")
+# druzyna.display_players()
+
+class Player:
+    def __init__(self, name, position, goals = 0):
+        self.name = name
+        self.position = position
+        self.goals = goals
+    
+    def info(self):
+        print(f"Zawodnik: {self.name}, Pozycja: {self.position}, Bramki: {self.goals}")
+
+    def strzel_gol(self):
+        self.goals += 1
+        return self.goals
 
 class Team:
     def __init__(self, name):
@@ -519,23 +559,29 @@ class Team:
     
     def add_player(self, player):
         self.players.append(player)
-        print(f"Zawodnik {player} został dodany do drużyny {self.name}")
+        print(f"Zawodnik: {player.name} został dodany do drużyny {self.name}")
     
-    def remove_player(self, player):
-        if player in self.players:
-            self.players.remove(player)
-            print(f"Zawodnik {player} został usunięty z drużyny {self.name}")
-        else:
-            print(f"Zawodnik {player} nie został znaleziony w drużynie {self.name}")
-    
-    def display_players(self):
-        print(f"Zawodnicy drużyny {self.name}:")
+    def pokaz_sklad(self):
+        print(f"Skład drużyny {self.name}: ")
         for player in self.players:
-            print(f" - {player}")
+            print(f" - {player.name}")
+    
+    def najlepszy_strzelec(self):
+        najlepszy = self.players[0]
+        for player in self.players:
+            if player.goals > najlepszy.goals:
+                najlepszy = player
+        return najlepszy
+        
+            
+team = Team("Barcelona")
+p1 = Player("Raphinha", "Skrzydłowy")
+p2 = Player("Lewandowski", "Napastnik")
+team.add_player(p1)
+team.add_player(p2)
+p2.strzel_gol()
+p2.strzel_gol()
+p1.strzel_gol()
+team.pokaz_sklad()
+print("Najlepszym strzelcem jest " + team.najlepszy_strzelec().name)
 
-druzyna = Team("Barcelona")
-druzyna.add_player("Raphinha")
-druzyna.display_players()
-druzyna.add_player("Lamine Yamal")
-druzyna.remove_player("Raphinha")
-druzyna.display_players()
