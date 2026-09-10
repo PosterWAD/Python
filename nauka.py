@@ -1,4 +1,5 @@
 import random
+import math
 
 #imie = input("Podaj imię: ")
 #print(f"Wybrane imie to: {imie}")
@@ -456,34 +457,41 @@ import random
 #player2.info()
 #player3.info()
 
-players = [1,2,3]
+# players = [1,2,3]
+#
+# for player in players:
+#     print(f"Numer zawodnika: {player}")
+#
+# def czy_parzysta(podana_liczba):
+#     if podana_liczba % 2 == 0:
+#         return True
+#     else:
+#         return False
+# def czy_dodatnia(podana_liczba):
+#     if podana_liczba > 0:
+#         print(f"Liczba {podana_liczba} jest dodatnia")
+#     elif podana_liczba < 0:
+#         print(f"Liczba {podana_liczba} jest ujemna")
+#     else:
+#         print("Liczba jest zerem")
+#
+# liczba = int(input("Podaj liczbe: "))
+# if czy_parzysta(liczba):
+#     print(f"Liczba {liczba} jest parzysta")
+# else:
+#     print(f"Liczba {liczba} jest nieparzysta")
+# czy_dodatnia(liczba)
+#
+# if liczba > 10:
+#     print(f"Liczba {liczba} jest większa od 10")
+# elif liczba < 10:
+#     print(f"Liczba {liczba} jest mniejsza od 10")
+# else:
+#     print(f"Liczba {liczba} jest równa 10")
 
-for player in players:
-    print(f"Numer zawodnika: {player}")
+def pole_kola(r):
+    return math.pi * r * r
 
-def czy_parzysta(podana_liczba):
-    if podana_liczba % 2 == 0:
-        return True
-    else:
-        return False
-def czy_dodatnia(podana_liczba):
-    if podana_liczba > 0:
-        print(f"Liczba {podana_liczba} jest dodatnia")
-    elif podana_liczba < 0:
-        print(f"Liczba {podana_liczba} jest ujemna")
-    else:
-        print("Liczba jest zerem")
 
-liczba = int(input("Podaj liczbe: "))
-if czy_parzysta(liczba):
-    print(f"Liczba {liczba} jest parzysta")
-else:
-    print(f"Liczba {liczba} jest nieparzysta")
-czy_dodatnia(liczba)
-
-if liczba > 10:
-    print(f"Liczba {liczba} jest większa od 10")
-elif liczba < 10:
-    print(f"Liczba {liczba} jest mniejsza od 10")
-else:
-    print(f"Liczba {liczba} jest równa 10")
+r = float(input("Podaj promień: "))
+print(f"Pole koła o promieniu {r} wynosi {pole_kola(r)}")
