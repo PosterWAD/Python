@@ -436,3 +436,22 @@ import random
 
 #print(f"Suma liczb parzystych: {suma_parzystych(lista_liczb)}")
 
+
+class Player:
+    def __init__(self, name, team, position):
+        self.name = name
+        self.team = team
+        self.position = position
+
+    def info(self):
+        print(f"{self.name} gra w drużynie {self.team} na pozycji {self.position}")
+
+player1 = Player("Robert Lewandowski", "Chicago's Fire", "Napastnik")
+
+player1.info()
+
+player2 = Player("Szymon Piękoś", "Źródlana Team", "Napastnik")
+player3 = Player("Kamil Klysk", "Matysowska Team", "Bramkarz")
+
+player2.info()
+player3.info()
