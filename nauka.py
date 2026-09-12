@@ -578,3 +578,32 @@ import math
 # sklep.add_product(p3)
 # print(f"Łączna wartość: {sklep.total_value()}")
 # print(f"Najtańszy produkt: {sklep.find_cheapest().name}")
+
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return f"{self.title} - {self.author} ({self.pages} stron)"
+    
+    def is_long(self):
+        return self.pages > 300
+
+class Library:
+    def init(self, name):
+        self.name = name
+        self.books = []
+    
+    def add_book(self, book):
+        self.books.append(book)
+        print(f"Książka {book.title} została dodana do biblioteki {self.name}")
+    
+    def show_books(self):
+        print(f"Książki w bibliotece {self.name}:")
+        for book in self.books:
+            print(f" - {book}")
+    
+    def find_long_books(self):
+        
