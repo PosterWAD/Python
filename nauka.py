@@ -540,41 +540,41 @@ import math
 # druzyna.display_players()
 
 
-class Product:
-    def __init__(self, name, price, quantity=0):
-        self.name = name
-        self.price = price
-        self.quantity = quantity
-
-    def info(self):
-        print(f"Produkt: {self.name}, Cena: {self.price}, Ilość: {self.quantity}")
-
-class Shop:
-    def __init__(self, name):
-        self.name = name
-        self.products = []
-
-    def add_product(self, product):
-        self.products.append(product)
-        print(f"Produkt {product.name} został dodany do sklepu {self.name}")
-    def total_value(self):
-        return sum(product.price * product.quantity for product in self.products)
-
-    def find_cheapest(self):
-        if not self.products:
-            return None
-        najtańszy = self.products[0]
-        for product in self.products:
-            if product.price < najtańszy.price:
-                najtańszy = product
-        return najtańszy
-
-sklep = Shop("MediaMarkt")
-p1 = Product("Laptop", 3500, 10)
-p2 = Product("Myszka", 120, 50)
-p3 = Product("Monitor", 1800, 5)
-sklep.add_product(p1)
-sklep.add_product(p2)
-sklep.add_product(p3)
-print(f"Łączna wartość: {sklep.total_value()}")
-print(f"Najtańszy produkt: {sklep.find_cheapest().name}")
+# class Product:
+#     def __init__(self, name, price, quantity=0):
+#         self.name = name
+#         self.price = price
+#         self.quantity = quantity
+#
+#     def info(self):
+#         print(f"Produkt: {self.name}, Cena: {self.price}, Ilość: {self.quantity}")
+#
+# class Shop:
+#     def __init__(self, name):
+#         self.name = name
+#         self.products = []
+#
+#     def add_product(self, product):
+#         self.products.append(product)
+#         print(f"Produkt {product.name} został dodany do sklepu {self.name}")
+#     def total_value(self):
+#         return sum(product.price * product.quantity for product in self.products)
+#
+#     def find_cheapest(self):
+#         if not self.products:
+#             return None
+#         najtańszy = self.products[0]
+#         for product in self.products:
+#             if product.price < najtańszy.price:
+#                 najtańszy = product
+#         return najtańszy
+#
+# sklep = Shop("MediaMarkt")
+# p1 = Product("Laptop", 3500, 10)
+# p2 = Product("Myszka", 120, 50)
+# p3 = Product("Monitor", 1800, 5)
+# sklep.add_product(p1)
+# sklep.add_product(p2)
+# sklep.add_product(p3)
+# print(f"Łączna wartość: {sklep.total_value()}")
+# print(f"Najtańszy produkt: {sklep.find_cheapest().name}")
