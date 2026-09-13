@@ -612,3 +612,13 @@ class Library:
                 long_books.append(book)
         return long_books
     
+
+ksiazka1 = Book("Pan Tadeusz", "Adam Mickiewicz", 1000)
+ksiazka2 = Book("Wesele", "Stanisław Wyspiański", 300)
+ksiazka3 = Book("Zemsta", "Aleksander Fredro", 200)
+biblioteka = Library("Biblioteka Miejska")
+biblioteka.add_book(ksiazka1)
+biblioteka.add_book(ksiazka2)
+biblioteka.add_book(ksiazka3)
+biblioteka.show_books()
+print(f"Długie książki: {biblioteka.find_long_books()}")
