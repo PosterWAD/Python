@@ -606,4 +606,9 @@ class Library:
             print(f" - {book}")
     
     def find_long_books(self):
-        
+        long_books = []
+        for book in self.books:
+            if book.is_long():
+                long_books.append(book)
+        return long_books
+    
