@@ -592,7 +592,7 @@ class Book:
         return self.pages > 300
 
 class Library:
-    def init(self, name):
+    def __init__(self, name):
         self.name = name
         self.books = []
     
