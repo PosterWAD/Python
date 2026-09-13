@@ -579,56 +579,56 @@ import math
 # print(f"Łączna wartość: {sklep.total_value()}")
 # print(f"Najtańszy produkt: {sklep.find_cheapest().name}")
 
-class Book:
-    def __init__(self, title, author, pages):
-        self.title = title
-        self.author = author
-        self.pages = pages
-
-    def __str__(self):
-        return f"{self.title} - {self.author} ({self.pages} stron)"
-    
-    def is_long(self):
-        return self.pages > 300
-
-class Library:
-    def __init__(self, name):
-        self.name = name
-        self.books = []
-    
-    def add_book(self, book):
-        self.books.append(book)
-        print(f"Książka {book.title} została dodana do biblioteki {self.name}")
-    
-    def show_books(self):
-        print(f"Książki w bibliotece {self.name}:")
-        for book in self.books:
-            print(f" - {book}")
-    
-    def find_long_books(self):
-        long_books = []
-        for book in self.books:
-            if book.is_long():
-                long_books.append(book)
-        return long_books
-    
-
-ksiazka1 = Book("Pan Tadeusz", "Adam Mickiewicz", 1000)
-ksiazka2 = Book("Wesele", "Stanisław Wyspiański", 300)
-ksiazka3 = Book("Zemsta", "Aleksander Fredro", 200)
-biblioteka = Library("Biblioteka Miejska")
-biblioteka.add_book(ksiazka1)
-biblioteka.add_book(ksiazka2)
-biblioteka.add_book(ksiazka3)
-biblioteka.show_books()
-
-print(ksiazka1)
-
-print("Długie książki:")
-for ksiazka in biblioteka.books:
-    if ksiazka.is_long():
-        print(ksiazka)
-
-print("Długie książki:")
-for book in biblioteka.find_long_books():
-    print(f"-{book}")
+# class Book:
+#     def __init__(self, title, author, pages):
+#         self.title = title
+#         self.author = author
+#         self.pages = pages
+#
+#     def __str__(self):
+#         return f"{self.title} - {self.author} ({self.pages} stron)"
+#
+#     def is_long(self):
+#         return self.pages > 300
+#
+# class Library:
+#     def __init__(self, name):
+#         self.name = name
+#         self.books = []
+#
+#     def add_book(self, book):
+#         self.books.append(book)
+#         print(f"Książka {book.title} została dodana do biblioteki {self.name}")
+#
+#     def show_books(self):
+#         print(f"Książki w bibliotece {self.name}:")
+#         for book in self.books:
+#             print(f" - {book}")
+#
+#     def find_long_books(self):
+#         long_books = []
+#         for book in self.books:
+#             if book.is_long():
+#                 long_books.append(book)
+#         return long_books
+#
+#
+# ksiazka1 = Book("Pan Tadeusz", "Adam Mickiewicz", 1000)
+# ksiazka2 = Book("Wesele", "Stanisław Wyspiański", 300)
+# ksiazka3 = Book("Zemsta", "Aleksander Fredro", 200)
+# biblioteka = Library("Biblioteka Miejska")
+# biblioteka.add_book(ksiazka1)
+# biblioteka.add_book(ksiazka2)
+# biblioteka.add_book(ksiazka3)
+# biblioteka.show_books()
+#
+# print(ksiazka1)
+#
+# print("Długie książki:")
+# for ksiazka in biblioteka.books:
+#     if ksiazka.is_long():
+#         print(ksiazka)
+#
+# print("Długie książki:")
+# for book in biblioteka.find_long_books():
+#     print(f"-{book}")
