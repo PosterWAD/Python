@@ -632,3 +632,33 @@ import math
 # print("Długie książki:")
 # for book in biblioteka.find_long_books():
 #     print(f"-{book}")
+
+class Vehicle:
+    def __init__(self, brand, year):
+        self.brand = brand
+        self.year = year
+
+    def __str__(self):
+        return f"{self.brand} ({self.year})"
+    
+    def age(self):
+        return 2026 - self.year
+
+class Car(Vehicle):
+    def __init__(self, brand, year, num_of_doors):
+        self.brand = brand
+        self.year = year
+        self.num_of_doors = num_of_doors
+    
+    def __str__(self):
+        return f"{self.brand} ({self.year}) ma {self.num_of_doors} drzwi"
+
+class Motorcycle(Vehicle):
+    def __init__(self, brand, year, engine_type):
+        self.brand = brand
+        self.year = year
+        self.engine_type = engine_type
+
+    def __str__(self):
+        return f"{self.brand} ({self.year}) ma {self.engine_type}"
+
