@@ -662,3 +662,11 @@ class Motorcycle(Vehicle):
     def __str__(self):
         return f"{self.brand} ({self.year}) ma {self.engine_type}"
 
+Audi_A3 = Vehicle("Audi", 2024)
+print(Audi_A3)
+
+Audi_A3 = Car("Audi", 2024, 5)
+print(Audi_A3)
+
+Yamaha = Motorcycle("Yamaha", 2024, "V8")
+print(Yamaha)
