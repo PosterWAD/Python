@@ -621,4 +621,14 @@ biblioteka.add_book(ksiazka1)
 biblioteka.add_book(ksiazka2)
 biblioteka.add_book(ksiazka3)
 biblioteka.show_books()
-print(f"Długie książki: {biblioteka.find_long_books()}")
+
+print(ksiazka1)
+
+print("Długie książki:")
+for ksiazka in biblioteka.books:
+    if ksiazka.is_long():
+        print(ksiazka)
+
+print("Długie książki:")
+for book in biblioteka.find_long_books():
+    print(f"-{book}")
