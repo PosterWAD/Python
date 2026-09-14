@@ -681,3 +681,4 @@ class Dog(Animal):
 pies = Dog("Reks", 5, "Labrador")
 print(pies.name)   # "Reks"   ← ustawione przez super()
 print(pies.breed)  # "Labrador" ← ustawione przez Dog
+
