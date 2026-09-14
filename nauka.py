@@ -668,17 +668,31 @@ import math
 # print(Yamaha)
 
 
-class Animal:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+class Account:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+    
+    def __str__(self):
+        return f"{self.owner} | Saldo: {self.balance}"
 
-class Dog(Animal):
-    def __init__(self, name, age, breed):
-        super().__init__(name, age)  # ← wywołuje Animal.__init__
-        self.breed = breed           # ← dodaje tylko nowe rzeczy
+    def deposit(self, amount):
+        self.amount = amount
+        self.balance += amount
+    
+    def withdraw(self, amount):
+        self.amount = amount
+        if self.amount > self.balance:
+            print("Nie masz wystarczajacych srodkow na koncie")
+        else:
+            self.balance -= amount
 
-pies = Dog("Reks", 5, "Labrador")
-print(pies.name)   # "Reks"   ← ustawione przez super()
-print(pies.breed)  # "Labrador" ← ustawione przez Dog
+class SacingsAccount(Account):
+    def __init__(self, owner, balance=0):
+        super().__init__(owner, balance)
+        self.interest_rate = 0.05
 
+    def add_
+
+    
+    
