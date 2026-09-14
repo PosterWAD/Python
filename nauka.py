@@ -687,12 +687,34 @@ class Account:
         else:
             self.balance -= amount
 
-class SacingsAccount(Account):
+class SavingsAccount(Account):
     def __init__(self, owner, balance=0):
         super().__init__(owner, balance)
         self.interest_rate = 0.05
 
-    def add_
+    def add_interest(self, amount):
+        self.balance += amount * self.interest_rate
+        print(f"Oprocentowanie dodane do konta: {self.balance * self.interest_rate}")
+
+class StudentAccount(Account):
+    def __init__(self, owner, balance=0, university=None):
+        super().__init__(owner, balance)
+        self.university = university
+
+    def withdraw(self, amount):
+        if amount > 500 or amount < 0:
+            print("Nie mozna wyplacic wiekszej kwoty niz 500zl lub kwoty ujemnej")
+        else:
+            self.balance -= amount
+
+konto = SavingsAccount("Anna", 1000)
+konto.add_interest()
+print(konto)
+
+student = StudentAccount("Marek", 2000, "AGH")
+student.withdraw(300)
+student.withdraw(600)
+print(student)
 
     
     
