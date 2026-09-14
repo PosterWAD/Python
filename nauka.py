@@ -666,3 +666,18 @@ import math
 #
 # Yamaha = Motorcycle("Yamaha", 2024, "V8")
 # print(Yamaha)
+
+
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class Dog(Animal):
+    def __init__(self, name, age, breed):
+        super().__init__(name, age)  # ← wywołuje Animal.__init__
+        self.breed = breed           # ← dodaje tylko nowe rzeczy
+
+pies = Dog("Reks", 5, "Labrador")
+print(pies.name)   # "Reks"   ← ustawione przez super()
+print(pies.breed)  # "Labrador" ← ustawione przez Dog
