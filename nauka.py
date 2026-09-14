@@ -708,7 +708,7 @@ class StudentAccount(Account):
             self.balance -= amount
 
 konto = SavingsAccount("Anna", 1000)
-konto.add_interest()
+konto.add_interest(50)
 print(konto)
 
 student = StudentAccount("Marek", 2000, "AGH")
