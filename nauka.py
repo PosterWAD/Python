@@ -690,8 +690,8 @@ class SavingsAccount(Account):
         super().__init__(owner, balance)
         self.interest_rate = 0.05
 
-    def add_interest(self, amount):
-        self.balance += amount * self.interest_rate
+    def add_interest(self):
+        self.balance += self.balance * self.interest_rate
         print(f"Oprocentowanie dodane do konta: {self.balance * self.interest_rate}")
 
 class StudentAccount(Account):
@@ -706,7 +706,7 @@ class StudentAccount(Account):
             self.balance -= amount
 
 konto = SavingsAccount("Anna", 1000)
-konto.add_interest(50)
+konto.add_interest()
 print(konto)
 
 student = StudentAccount("Marek", 2000, "AGH")
