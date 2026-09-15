@@ -686,9 +686,10 @@ class Account:
             self.balance -= amount
 
 class SavingsAccount(Account):
-    def __init__(self, owner, balance=0):
+    def __init__(self, owner, balance, interest_rate):
         super().__init__(owner, balance)
-        self.interest_rate = 0.05
+        self.interest_rate = interest_rate
+
 
     def add_interest(self):
         self.balance += self.balance * self.interest_rate
