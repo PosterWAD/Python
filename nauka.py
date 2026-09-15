@@ -701,12 +701,14 @@ class StudentAccount(Account):
         self.university = university
 
     def withdraw(self, amount):
-        if amount > 500 or amount < 0:
-            print("Nie mozna wyplacic wiekszej kwoty niz 500zl lub kwoty ujemnej")
+        if amount > 500:
+            print("Nie mozna wyplacic wiekszej kwoty niz 500zl")
+        elif amount > self.balance:
+            print("Nie masz wystarczajacych srodkow na koncie")
         else:
             self.balance -= amount
 
-konto = SavingsAccount("Anna", 1000)
+konto = SavingsAccount("Anna", 1000, 0.05)
 konto.add_interest()
 print(konto)
 
