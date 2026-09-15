@@ -668,54 +668,50 @@ import math
 # print(Yamaha)
 
 
-class Account:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
-    
-    def __str__(self):
-        return f"{self.owner} | Saldo: {self.balance}"
-
-    def deposit(self, amount):
-        self.balance += amount
-    
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print("Nie masz wystarczajacych srodkow na koncie")
-        else:
-            self.balance -= amount
-
-class SavingsAccount(Account):
-    def __init__(self, owner, balance, interest_rate):
-        super().__init__(owner, balance)
-        self.interest_rate = interest_rate
-
-
-    def add_interest(self):
-        self.balance += self.balance * self.interest_rate
-        print(f"Oprocentowanie dodane do konta: {self.balance * self.interest_rate}")
-
-class StudentAccount(Account):
-    def __init__(self, owner, balance=0, university=None):
-        super().__init__(owner, balance)
-        self.university = university
-
-    def withdraw(self, amount):
-        if amount > 500:
-            print("Nie mozna wyplacic wiekszej kwoty niz 500zl")
-        elif amount > self.balance:
-            print("Nie masz wystarczajacych srodkow na koncie")
-        else:
-            self.balance -= amount
-
-konto = SavingsAccount("Anna", 1000, 0.05)
-konto.add_interest()
-print(konto)
-
-student = StudentAccount("Marek", 2000, "AGH")
-student.withdraw(300)
-student.withdraw(600)
-print(student)
-
-    
-    
+# class Account:
+#     def __init__(self, owner, balance=0):
+#         self.owner = owner
+#         self.balance = balance
+#
+#     def __str__(self):
+#         return f"{self.owner} | Saldo: {self.balance}"
+#
+#     def deposit(self, amount):
+#         self.balance += amount
+#
+#     def withdraw(self, amount):
+#         if amount > self.balance:     
+#             print("Nie masz wystarczajacych srodkow na koncie")
+#         else:
+#             self.balance -= amount
+#
+# class SavingsAccount(Account):
+#     def __init__(self, owner, balance, interest_rate):
+#         super().__init__(owner, balance)
+#         self.interest_rate = interest_rate
+#
+#     def add_interest(self):
+#         self.balance += self.balance * self.interest_rate
+#         print(f"Oprocentowanie dodane do konta: {self.balance * self.interest_rate}")
+#
+# class StudentAccount(Account):
+#     def __init__(self, owner, balance=0, university=None):
+#         super().__init__(owner, balance)
+#         self.university = university
+#
+#     def withdraw(self, amount):
+#         if amount > 500:
+#             print("Nie mozna wyplacic wiekszej kwoty niz 500zl")
+#         elif amount > self.balance:
+#             print("Nie masz wystarczajacych srodkow na koncie")
+#         else:
+#             self.balance -= amount
+#
+# konto = SavingsAccount("Anna", 1000, 0.05)
+# konto.add_interest()
+# print(konto)
+#
+# student = StudentAccount("Marek", 2000, "AGH")
+# student.withdraw(300)
+# student.withdraw(600)
+# print(student)
