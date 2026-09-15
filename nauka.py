@@ -677,12 +677,10 @@ class Account:
         return f"{self.owner} | Saldo: {self.balance}"
 
     def deposit(self, amount):
-        self.amount = amount
         self.balance += amount
     
     def withdraw(self, amount):
-        self.amount = amount
-        if self.amount > self.balance:
+        if amount > self.balance:
             print("Nie masz wystarczajacych srodkow na koncie")
         else:
             self.balance -= amount
