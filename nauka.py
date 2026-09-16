@@ -722,3 +722,9 @@ for x in range(10):
 print(kwadraty)
 
 kwadraty = [x ** 2 for x in range(10)]
+print(kwadraty)
+
+liczby = [1,5,12,3,8,15,7,20,2,9]
+parzyste = [x for x in liczby if x % 2 == 0]
+print(parzyste)
+
