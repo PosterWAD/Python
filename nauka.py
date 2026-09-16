@@ -728,3 +728,5 @@ liczby = [1,5,12,3,8,15,7,20,2,9]
 parzyste = [x for x in liczby if x % 2 == 0]
 print(parzyste)
 
+wieksze_od_10 = [x for x in liczby if x > 10]
+print(wieksze_od_10)
