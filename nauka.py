@@ -689,7 +689,7 @@ import math
 #     def __init__(self, owner, balance, interest_rate):
 #         super().__init__(owner, balance)
 #         self.interest_rate = interest_rate
-#
+# 
 #     def add_interest(self):
 #         self.balance += self.balance * self.interest_rate
 #         print(f"Oprocentowanie dodane do konta: {self.balance * self.interest_rate}")
@@ -715,3 +715,10 @@ import math
 # student.withdraw(300)
 # student.withdraw(600)
 # print(student)
+
+kwadraty = []
+for x in range(10):
+    kwadraty.append(x ** 2)
+print(kwadraty)
+
+kwadraty = [x ** 2 for x in range(10)]
