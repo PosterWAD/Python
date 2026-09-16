@@ -730,3 +730,6 @@ print(parzyste)
 
 wieksze_od_10 = [x for x in liczby if x > 10]
 print(wieksze_od_10)
+
+nazwy = [f"Liczba: {x}" for x in liczby]
+print(nazwy)
