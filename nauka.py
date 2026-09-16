@@ -716,20 +716,20 @@ import math
 # student.withdraw(600)
 # print(student)
 
-kwadraty = []
-for x in range(10):
-    kwadraty.append(x ** 2)
-print(kwadraty)
-
-kwadraty = [x ** 2 for x in range(10)]
-print(kwadraty)
-
-liczby = [1,5,12,3,8,15,7,20,2,9]
-parzyste = [x for x in liczby if x % 2 == 0]
-print(parzyste)
-
-wieksze_od_10 = [x for x in liczby if x > 10]
-print(wieksze_od_10)
-
-nazwy = [f"Liczba: {x}" for x in liczby]
-print(nazwy)
+# kwadraty = []
+# for x in range(10):
+#     kwadraty.append(x ** 2)
+# print(kwadraty)
+#
+# kwadraty = [x ** 2 for x in range(10)]
+# print(kwadraty)
+#
+# liczby = [1,5,12,3,8,15,7,20,2,9]
+# parzyste = [x for x in liczby if x % 2 == 0]
+# print(parzyste)
+#
+# wieksze_od_10 = [x for x in liczby if x > 10]
+# print(wieksze_od_10)
+#
+# nazwy = [f"Liczba: {x}" for x in liczby]
+# print(nazwy)
