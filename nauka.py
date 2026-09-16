@@ -734,25 +734,25 @@ import math
 # nazwy = [f"Liczba: {x}" for x in liczby]
 # print(nazwy)  
 
-while True:
-    print("Wybierz co chcesz zrobić: ")
-    print("1. Dodać tekst do pliku")
-    print("2. Odczytać tekst z pliku")
-    print("3. Wyjść")
-    wybor = int(input("Podaj numer wybranej opcji: "))    
-    try:
-        if wybor == 1:
-            print("Podaj tekst, który chcesz dodać do pliku:")
-            tekst = input()
-            with open("plik.txt", "a") as f:
-                f.write(tekst + "\n")
-            print("Tekst został dodany do pliku")
-        elif wybor == 2:
-            with open("plik.txt", "r") as f:
-                print(f.read())    
-        elif wybor == 3:
-            break
-        else:
-            print("Podano zły numer, spróbuj ponownie")
-    except FileNotFoundError:
-        print("Nie znaleziono pliku")
+# while True:
+#     print("Wybierz co chcesz zrobić: ")
+#     print("1. Dodać tekst do pliku")
+#     print("2. Odczytać tekst z pliku")
+#     print("3. Wyjść")
+#     wybor = int(input("Podaj numer wybranej opcji: "))
+#     try:
+#         if wybor == 1:
+#             print("Podaj tekst, który chcesz dodać do pliku:")
+#             tekst = input()
+#             with open("plik.txt", "a") as f:
+#                 f.write(tekst + "\n")
+#             print("Tekst został dodany do pliku")
+#         elif wybor == 2:
+#             with open("plik.txt", "r") as f:
+#                 print(f.read())
+#         elif wybor == 3:
+#             break
+#         else:
+#             print("Podano zły numer, spróbuj ponownie")
+#     except FileNotFoundError:
+#         print("Nie znaleziono pliku")
