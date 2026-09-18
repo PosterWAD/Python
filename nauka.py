@@ -757,5 +757,21 @@ import math
 #     except FileNotFoundError:
 #         print("Nie znaleziono pliku")
 
+def dodaj_produkt(lista_produktow):
+    nazwa = input("Podaj nazwe produktu")
+    cena = float(input("Podaj cene produktu"))
+    ilosc = int(input("Podaj ilosc produktu"))
+    lista_produktow.append(nazwa, cena, ilosc)
+    print(f"Produkt {nazwa} zostal dodany do listy")
+
+produkty = []
+
 while True:
+    print("Wybierz co chcesz zrobić:")
+    print("1. Wyświetl produkty")
+    print("2. Dodaj produkt")
+    print("3. Usuń produkt")
+    print("4. Wyświetl liczbę produktów")
+    print("0. Wyjście")
+    wybor = int(input("Podaj numer wybranej opcji: "))
     
