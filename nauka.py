@@ -757,7 +757,9 @@ import math
 #     except FileNotFoundError:
 #         print("Nie znaleziono pliku")
 
-
+def wyswietl_prudkty(lista_produktow):
+    for produkt in lista_produktow:
+        print(f"Nazwa: {produkt[0]}, Cena: {produkt[1]}, Ilosc: {produkt[2]}")    
 
 def dodaj_produkt(lista_produktow):
     nazwa = input("Podaj nazwe produktu")
