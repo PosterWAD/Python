@@ -756,3 +756,6 @@ import math
 #             print("Podano zły numer, spróbuj ponownie")
 #     except FileNotFoundError:
 #         print("Nie znaleziono pliku")
+
+while True:
+    
