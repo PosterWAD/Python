@@ -795,4 +795,14 @@ while True:
     print("4. Wyświetl liczbę produktów")
     print("0. Wyjście")
     wybor = int(input("Podaj numer wybranej opcji: "))
+    if wybor == 1:
+        wyswietl_prudkty(produkty)
+    elif wybor == 2:
+        dodaj_produkt(produkty)
+    elif wybor == 3:
+        usun_produkt(produkty)
+    elif wybor == 4:
+        liczba_produktow(produkty)
+    elif wybor == 0:
+        wyjscie_z_programu()
     
