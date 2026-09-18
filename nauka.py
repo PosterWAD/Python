@@ -757,12 +757,25 @@ import math
 #     except FileNotFoundError:
 #         print("Nie znaleziono pliku")
 
+
+
 def dodaj_produkt(lista_produktow):
     nazwa = input("Podaj nazwe produktu")
     cena = float(input("Podaj cene produktu"))
     ilosc = int(input("Podaj ilosc produktu"))
     lista_produktow.append(nazwa, cena, ilosc)
     print(f"Produkt {nazwa} zostal dodany do listy")
+
+def usun_produkt(lista_produktow):
+    nazwa = input("Podaj nazwe produktu do usuniecia:")
+    for produkt in lista_produktow:
+        if produkt[0] == nazwa:
+            lista_produktow.remove(produkt)
+            print(f"Produkt {nazwa} zostal usuniety z listy")
+            break
+    else:
+        print(f"Nie znaleziono produktu {nazwa}")
+
 
 produkty = []
 
