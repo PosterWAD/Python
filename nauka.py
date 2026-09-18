@@ -778,10 +778,6 @@ def usun_produkt(lista_produktow):
     else:
         print(f"Nie znaleziono produktu {nazwa}")
 
-def wyjscie_z_programu():
-    print("Dziekujemy za skorzystanie z programu. Do widzenia!")
-    exit()
-
 def liczba_produktow(lista_produktow):
     print(f"Ilosc produktow: {len(lista_produktow)}")
 
@@ -804,5 +800,5 @@ while True:
     elif wybor == 4:
         liczba_produktow(produkty)
     elif wybor == 0:
-        wyjscie_z_programu()
+        exit()
     
