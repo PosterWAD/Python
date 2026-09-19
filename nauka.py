@@ -757,48 +757,48 @@ import math
 #     except FileNotFoundError:
 #         print("Nie znaleziono pliku")
 
-def wyswietl_prudkty(lista_produktow):
-    for produkt in lista_produktow:
-        print(f"Nazwa: {produkt[0]}, Cena: {produkt[1]}, Ilosc: {produkt[2]}")    
-
-def dodaj_produkt(lista_produktow):
-    nazwa = input("Podaj nazwe produktu")
-    cena = float(input("Podaj cene produktu"))
-    ilosc = int(input("Podaj ilosc produktu"))
-    lista_produktow.append(nazwa, cena, ilosc)
-    print(f"Produkt {nazwa} zostal dodany do listy")
-
-def usun_produkt(lista_produktow):
-    nazwa = input("Podaj nazwe produktu do usuniecia:")
-    for produkt in lista_produktow:
-        if produkt[0] == nazwa:
-            lista_produktow.remove(produkt)
-            print(f"Produkt {nazwa} zostal usuniety z listy")
-            break
-    else:
-        print(f"Nie znaleziono produktu {nazwa}")
-
-def liczba_produktow(lista_produktow):
-    print(f"Ilosc produktow: {len(lista_produktow)}")
-
-produkty = []
-
-while True:
-    print("Wybierz co chcesz zrobić:")
-    print("1. Wyświetl produkty")
-    print("2. Dodaj produkt")
-    print("3. Usuń produkt")
-    print("4. Wyświetl liczbę produktów")
-    print("0. Wyjście")
-    wybor = int(input("Podaj numer wybranej opcji: "))
-    if wybor == 1:
-        wyswietl_prudkty(produkty)
-    elif wybor == 2:
-        dodaj_produkt(produkty)
-    elif wybor == 3:
-        usun_produkt(produkty)
-    elif wybor == 4:
-        liczba_produktow(produkty)
-    elif wybor == 0:
-        exit()
+# def wyswietl_prudkty(lista_produktow):
+#     for produkt in lista_produktow:
+#         print(f"Nazwa: {produkt[0]}, Cena: {produkt[1]}, Ilosc: {produkt[2]}")    
+#
+# def dodaj_produkt(lista_produktow):
+#     nazwa = input("Podaj nazwe produktu")
+#     cena = float(input("Podaj cene produktu"))
+#     ilosc = int(input("Podaj ilosc produktu"))
+#     lista_produktow.append(nazwa, cena, ilosc)
+#     print(f"Produkt {nazwa} zostal dodany do listy")
+#
+# def usun_produkt(lista_produktow):
+#     nazwa = input("Podaj nazwe produktu do usuniecia:")
+#     for produkt in lista_produktow:
+#         if produkt[0] == nazwa:
+#             lista_produktow.remove(produkt)
+#             print(f"Produkt {nazwa} zostal usuniety z listy")
+#             break
+#     else:
+#         print(f"Nie znaleziono produktu {nazwa}")
+#
+# def liczba_produktow(lista_produktow):
+#     print(f"Ilosc produktow: {len(lista_produktow)}")
+#
+# produkty = []
+#
+# while True:
+#     print("Wybierz co chcesz zrobić:")
+#     print("1. Wyświetl produkty")
+#     print("2. Dodaj produkt")
+#     print("3. Usuń produkt")
+#     print("4. Wyświetl liczbę produktów")
+#     print("0. Wyjście")
+#     wybor = int(input("Podaj numer wybranej opcji: "))
+#     if wybor == 1:
+#         wyswietl_prudkty(produkty)
+#     elif wybor == 2:
+#         dodaj_produkt(produkty)
+#     elif wybor == 3:
+#         usun_produkt(produkty)
+#     elif wybor == 4:
+#         liczba_produktow(produkty)
+#     elif wybor == 0:
+#         exit()
     
