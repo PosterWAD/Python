@@ -823,6 +823,12 @@ def dodaj_zawodnika(druzyny):
     else:
         print(f"Druzyna {druzyna} nie istnieje")
     
+def wyswietl_druzyny(druzyny):
+    for druzyna in druzyny:
+        print(f"Druzyna {druzyna} ma {len(druzyny[druzyna])} zawodnikow")
+        for zawodnik in druzyny[druzyna]:
+            print(f" - {zawodnik}")
+
 
 druzyny = {
     "Real Madryt": [],
@@ -831,4 +837,5 @@ druzyny = {
 }
 
 dodaj_druzyne(druzyny)
+
 
