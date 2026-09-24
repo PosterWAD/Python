@@ -803,57 +803,57 @@ import math
 #         exit()
     
 
-def dodaj_druzyne(druzyny):
-    print("Wybierz nazwe dla swojej druzyny:")
-    druzyna = input()
-    if druzyna not in druzyny:
-        druzyny[druzyna] = []
-        print(f"Druzyna {druzyna} zostala dodana")
-    else:
-        print(f"Druzyna {druzyna} juz istnieje")
-
-def dodaj_zawodnika(druzyny):
-    print("Podaj druzyne do ktorej chcesz dodac zawodnika:")
-    druzyna = input()
-    if druzyna in druzyny:
-        print("Podaj imie i nazwisko zawodnika:")
-        zawodnik = input()
-        druzyny[druzyna].append(zawodnik)
-        print(f"Zawodnik {zawodnik} zostal dodany do druzyny {druzyna}")
-    else:
-        print(f"Druzyna {druzyna} nie istnieje")
-    
-def wyswietl_druzyny(druzyny):
-    for druzyna in druzyny:
-        print(f"Druzyna {druzyna} ma {len(druzyny[druzyna])} zawodnikow")
-        for zawodnik in druzyny[druzyna]:
-            print(f" - {zawodnik}")
-
-
-druzyny = {
-    "Real Madryt": [],
-    "Barcelona": [],
-    "Atletico Madryt": []
-}
-
-
-while True:
-    try:
-        print("Wybierz co chcesz zrobić:")
-        print("1. Dodaj drużynę")
-        print("2. Dodaj zawodnika")
-        print("3. Wyświetl drużyny")
-        print("0. Wyjście")
-        wybor = int(input("Podaj numer wybranej opcji: "))
-        if wybor == 1:
-            dodaj_druzyne(druzyny)
-        elif wybor == 2:
-            dodaj_zawodnika(druzyny)
-        elif wybor == 3:
-            wyswietl_druzyny(druzyny)
-        elif wybor == 0:
-            exit()
-        else:
-            print("Wybrano złą opcję, spróbuj ponownie")
-    except ValueError:
-        print("Podano zła wartość, spróbuj ponownie")
+# def dodaj_druzyne(druzyny):
+#     print("Wybierz nazwe dla swojej druzyny:")
+#     druzyna = input()
+#     if druzyna not in druzyny:
+#         druzyny[druzyna] = []
+#         print(f"Druzyna {druzyna} zostala dodana")
+#     else:
+#         print(f"Druzyna {druzyna} juz istnieje")
+#
+# def dodaj_zawodnika(druzyny):
+#     print("Podaj druzyne do ktorej chcesz dodac zawodnika:")
+#     druzyna = input()
+#     if druzyna in druzyny:
+#         print("Podaj imie i nazwisko zawodnika:")
+#         zawodnik = input()
+#         druzyny[druzyna].append(zawodnik)
+#         print(f"Zawodnik {zawodnik} zostal dodany do druzyny {druzyna}")
+#     else:
+#         print(f"Druzyna {druzyna} nie istnieje")
+#     
+# def wyswietl_druzyny(druzyny):
+#     for druzyna in druzyny:
+#         print(f"Druzyna {druzyna} ma {len(druzyny[druzyna])} zawodnikow")
+#         for zawodnik in druzyny[druzyna]:
+#             print(f" - {zawodnik}")
+#
+#
+# druzyny = {
+#     "Real Madryt": [],
+#     "Barcelona": [],
+#     "Atletico Madryt": []
+# }
+#
+#
+# while True:
+#     try:
+#         print("Wybierz co chcesz zrobić:")
+#         print("1. Dodaj drużynę")
+#         print("2. Dodaj zawodnika")
+#         print("3. Wyświetl drużyny")
+#         print("0. Wyjście")
+#         wybor = int(input("Podaj numer wybranej opcji: "))
+#         if wybor == 1:
+#             dodaj_druzyne(druzyny)
+#         elif wybor == 2:
+#             dodaj_zawodnika(druzyny)
+#         elif wybor == 3:
+#             wyswietl_druzyny(druzyny)
+#         elif wybor == 0:
+#             exit()
+#         else:
+#             print("Wybrano złą opcję, spróbuj ponownie")
+#     except ValueError:
+#         print("Podano zła wartość, spróbuj ponownie")
