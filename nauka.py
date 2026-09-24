@@ -836,6 +836,24 @@ druzyny = {
     "Atletico Madryt": []
 }
 
-dodaj_druzyne(druzyny)
 
-
+while True:
+    try:
+        print("Wybierz co chcesz zrobić:")
+        print("1. Dodaj drużynę")
+        print("2. Dodaj zawodnika")
+        print("3. Wyświetl drużyny")
+        print("0. Wyjście")
+        wybor = int(input("Podaj numer wybranej opcji: "))
+        if wybor == 1:
+            dodaj_druzyne(druzyny)
+        elif wybor == 2:
+            dodaj_zawodnika(druzyny)
+        elif wybor == 3:
+            wyswietl_druzyny(druzyny)
+        elif wybor == 0:
+            exit()
+        else:
+            print("Wybrano złą opcję, spróbuj ponownie")
+    except ValueError:
+        print("Podano zła wartość, spróbuj ponownie")
