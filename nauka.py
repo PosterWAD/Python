@@ -802,3 +802,33 @@ import math
 #     elif wybor == 0:
 #         exit()
     
+
+def dodaj_druzyne(druzyny):
+    print("Wybierz nazwe dla swojej druzyny:")
+    druzyna = input()
+    if druzyna not in druzyny:
+        druzyny[druzyna] = []
+        print(f"Druzyna {druzyna} zostala dodana")
+    else:
+        print(f"Druzyna {druzyna} juz istnieje")
+
+def dodaj_zawodnika(druzyny):
+    print("Podaj druzyne do ktorej chcesz dodac zawodnika:")
+    druzyna = input()
+    if druzyna in druzyny:
+        print("Podaj imie i nazwisko zawodnika:")
+        zawodnik = input()
+        druzyny[druzyna].append(zawodnik)
+        print(f"Zawodnik {zawodnik} zostal dodany do druzyny {druzyna}")
+    else:
+        print(f"Druzyna {druzyna} nie istnieje")
+    
+
+druzyny = {
+    "Real Madryt": [],
+    "Barcelona": [],
+    "Atletico Madryt": []
+}
+
+dodaj_druzyne(druzyny)
+
